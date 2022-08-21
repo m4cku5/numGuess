@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
     while(running) {
 
         int guess;
-        int guessCount = 1;
+        int guessCount = 0;
         int lowerNumber;
         int numberOfGuesses;
         int randomNumber;
@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
         printf("You chose %d to %d as your range.\n", lowerNumber, upperNumber);
 
         getRandomNumber(&lowerNumber, &upperNumber, &randomNumber);
-        //printf("The random number is %d.\n", randomNumber);
+        printf("The random number is %d.\n", randomNumber);
 
         getNumberOfGuesses(&numberOfGuesses);
         printf("You have %d guesses.\n", numberOfGuesses);
@@ -39,7 +39,7 @@ int main(int argc, char *argv[]) {
             char t[7];
 
             getGuess(&lowerNumber, &upperNumber, &guess);
-            printf("You guessed %d.\n", guess);
+            // printf("You guessed %d.\n", guess);
 
             guessCount++;
 
